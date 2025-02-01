@@ -1,0 +1,851 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osumare clone</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .button1 {
+            /* height: 17px;
+            width: 125px;
+            border: 2px solid black;
+            padding: 5px 20px;
+            margin: 20px;
+            border-radius: 30px;
+            color: rgb(16, 16, 16);
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            float: right;
+            cursor: pointer; */
+            margin-right: 54px;
+            margin-top: 11px;
+            height: 32px;
+            width: 170px;
+            border-radius: 20px;
+            border: 2px solid black;
+            font-weight: 600;
+            background-color: white;
+        }
+
+        .button1:hover {
+            background-color: rgb(22, 108, 237);
+            color: white;
+
+        }
+
+        .box {
+            height: 57px;
+            width: 102px;
+
+        }
+
+        .box3 {
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+            height: 550px;
+            width: 700px;
+            border: 5px solid white;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .box5 {
+            justify-items: center;
+            align-items: center;
+            height: 550px;
+            width: 700px;
+            border: 5px solid white;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .parent {
+            height: 180px;
+            width: 98vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right: 16px;
+            padding: 3px;
+
+        }
+
+        .box4 {
+            height: 150px;
+            width: 300px;
+
+            position: absolute;
+            background-color: rgb(27, 111, 237);
+            align-items: center;
+            justify-content: center;
+            opacity: 0.3;
+            flex-wrap: wrap;
+            filter: blur(50px);
+            margin-left: 750px;
+        }
+
+        .parent2 {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+
+        }
+
+        .button2 {
+            margin-right: 54px;
+            margin-top: 11px;
+            height: 100px;
+            width: 170px;
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            background-color: rgb(22, 108, 237);
+            padding-left: 10x;
+            padding-right: 10px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #para {
+            line-height: 25px;
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 160%;
+            font-weight: bold;
+            line-height: 35px;
+            text-align: left;
+        }
+
+        h5 {
+            font-size: 160%;
+            font-weight: bold;
+            line-height: 35px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .button5 {
+            margin-right: 54px;
+            margin-top: 20px;
+            height: 50px;
+            width: 170px;
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            background-color: rgb(22, 108, 237);
+            padding-left: 10x;
+            padding-right: 10px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        span {
+            color: rgb(22, 108, 237);
+        }
+
+        .page1 {
+            height: 680px;
+            width: 98.3vw;
+            border: 5px solid white;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .box6 {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-bottom: 7%;
+
+        }
+
+        .textnew {
+            line-height: 20%;
+            height: 250px;
+            width: 590px;
+            border: 3px solid white;
+            margin-left: 10px;
+        }
+
+        .page3 {
+            height: 720px;
+            width: 98.3vw;
+            border: 5px solid rgb(243, 244, 246);
+            align-items: center;
+            background-color: rgb(243, 244, 246);
+            justify-content: center;
+            text-align: center;
+            line-height: 2px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .next {
+            height: 720px;
+            width: 98.3vw;
+            border: 5px solid rgb(243, 244, 246);
+            align-items: center;
+            background-color: rgb(243, 244, 246);
+            justify-content: center;
+            text-align: center;
+            line-height: 2px;
+            margin-top: 4%;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .free {
+            height: 230px;
+            width: 98vw;
+            border: 4px solid rgb(243, 244, 246);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: end;
+
+        }
+
+        .boxx {
+            height: 210px;
+            width: 340px;
+            border: 4px solid white;
+            background-color: white;
+            margin-top: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 20px;
+
+        }
+
+        .next3 {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            height: 510px;
+            width: 85vw;
+            border: 5px solid white;
+            margin-bottom: 7%;
+            margin-left: 6.5%;
+            justify-content: space-evenly;
+            margin-top: 3%;
+        }
+
+        .page4 {
+            height: 720px;
+            width: 98.3vw;
+            border: 5px solid white;
+            align-items: center;
+            background-color: white;
+            justify-content: center;
+            text-align: center;
+            line-height: 2px;
+            margin-top: 4%;
+        }
+
+        .boxt3 {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            height: 530px;
+            width: 85vw;
+            border: 5px solid white;
+            margin-bottom: 7%;
+            margin-left: 6.5%;
+            justify-content: space-evenly;
+            margin-top: 3%;
+
+        }
+
+        .boxx1 {
+            height: 390px;
+            width: 690px;
+            border: 5px solid white;
+            display: flex;
+            justify-content: space-between;
+            text-align: start;
+            flex-direction: column;
+
+        }
+
+        #pic1 {
+            height: 80px;
+            width: 650px;
+            border: 1px solid rgb(243, 241, 241);
+            margin-left: 20px;
+            margin-top: 2.4%;
+            box-shadow: 5px 8px 8px rgb(243, 241, 241);
+            border-radius: 5px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 15px;
+
+        }
+
+        #pic01 {
+            width: "60px";
+            height: "60px";
+            margin-left: 3%;
+            border-radius: 50%;
+            border: 2px solid whitesmoke;
+            background-color: rgb(245, 245, 245);
+        }
+
+        #tex {
+            margin-left: 3%;
+        }
+
+        .boxx2 {
+            height: 480px;
+            width: 500px;
+            border: 5px solid white;
+            text-align: center;
+        }
+
+        .page5 {
+            height: 623px;
+            width: 98.3vw;
+            border: 5px solid white;
+            text-align: center;
+            line-height: 3px;
+        }
+
+        .box04 {
+            align-items: center;
+            display: flex;
+            height: 450px;
+            width: 75vw;
+            border: 5px solid white;
+            margin-bottom: 7%;
+            margin-left: 11%;
+            justify-content: space-evenly;
+            margin-top: 3%;
+            line-height: 3px;
+
+        }
+
+        .boxx3 {
+            height: 300px;
+            width: 400px;
+            border: 5px solid white;
+            text-align: center;
+            /* margin-left: 5%; */
+
+        }
+
+        .boxx4 {
+            height: 320px;
+            width: 600px;
+            border: 5px solid white;
+            /* margin-right:5%; */
+        }
+
+        .but4 {
+
+            height: 36px;
+            width: 160px;
+            border-radius: 20px;
+            background-color: rgb(54, 98, 227);
+            transition: 0.1s;
+            color: white;
+            font-size: 17px;
+            border-color: rgb(54, 98, 227);
+            /* font-weight: 500; */
+            margin-right: 50%;
+        }
+
+        .boxt5 {
+            align-items: center;
+            display: flex;
+            height: 350px;
+            width: 96.8vw;
+            border: 5px solid white;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .page6 {
+
+            height: 810px;
+            width: 98.3vw;
+            text-align: center;
+            line-height: 3px;
+            border: 5px solid white;
+
+        }
+
+        .boxx5 {
+
+            height: 320px;
+            width: 650px;
+            border: 5px solid white;
+
+        }
+
+        #pics {
+            height: 120px;
+            width: 120px;
+        }
+
+        #h8 {
+            font-weight: 90;
+            font-size: 90%;
+            line-height: 25px;
+        }
+
+        #p {
+            font-weight: 440%;
+            font-size: 100%;
+        }
+
+        .page7 {
+            height: 520px;
+            width: 98.3vw;
+            border: 5px solid white;
+            text-align: center;
+            line-height: 3px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .blue {
+            height: 330px;
+            width: 340px;
+            /* border: 3px solid black; */
+            background-color: rgb(138, 176, 234);
+            filter: blur(90px);
+            opacity: 0.4;
+            margin-top: 3%;
+        }
+
+        .font {
+            height: 520px;
+            width: 600px;
+            border: 3px solid white;
+            font-size: larger;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        #pre {
+            font-size: 180;
+            line-height: 20px;
+
+        }
+
+        .red {
+            height: 330px;
+            width: 340px;
+
+            background-color: rgb(201, 120, 120);
+            filter: blur(90px);
+            opacity: 0.3;
+            margin-top: 3%;
+        }
+
+
+
+        .page8 {
+            height: 550px;
+            width: 98.3vw;
+            border: 5px solid white;
+            text-align: center;
+            line-height: 3px;
+
+        }
+
+        .box1 {
+            height: 350px;
+            width: 1020px;
+            border: 1px solid whitesmoke;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+            box-shadow: 3px 9px 10px rgb(205, 200, 200);
+            border-radius: 10px;
+            margin-left: 10%;
+        }
+
+        .img {
+            height: 180px;
+            width: 450px;
+            border: 3px solid white;
+            margin-top: 3.7%;
+        }
+
+        .boxx6 {
+            height: 170px;
+            width: 450px;
+            border: 3px solid white;
+            margin-top: 12%;
+
+        }
+
+        #id {
+            margin-top: 8%;
+            margin-right: 53%;
+
+        }
+
+        .arrow {
+            height: 90px;
+            width: 450px;
+            border: 1px solid white;
+            margin-left: 35%;
+            margin-top: 3%;
+            display: flex;
+            justify-content: space-evenly;
+
+
+        }
+
+        .small {
+            height: 80px;
+            width: 450px;
+            border: 3px solid white;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .low {
+            border: 3px solid white;
+            margin-top: 3%;
+        }
+
+        .boxx7 {
+            height: 70px;
+            width: 600px;
+            border: 0.1px solid whitesmoke;
+            text-align: start;
+            line-height: 35px;
+            font-weight: 900;
+            transition: 0.1s;
+        }
+
+        .boxx7:hover {
+            background-color: rgb(54, 98, 227);
+            color: white;
+            box-shadow: 4px 5px 8px rgb(135, 182, 235);
+        }
+
+        .bax6 {
+            align-items: center;
+            height: 300px;
+            width: 620px;
+            border: 2px solid whitesmoke;
+            margin-top: 6%;
+            margin-left: 14%;
+            margin-right:10%;
+            box-shadow: 40px 25px 45px rgb(205, 200, 200);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="parent">
+        <div class="box"><img src="https://qsumare.netlify.app/public/Osumare%20Logo-01%20(2)%204.png" alt="logo"></div>
+        <button class="button1">Contact us</button>
+    </div>
+
+
+    <div class="parent2">
+        <div class="box3">
+            <p>
+            <h1>Elevate <span>Real Estate Success</span> with <br> Osumare's Digital Expertise </h1>
+            <!-- <h1>Osumare's Digital Expertise</h1> -->
+            <p>Tailored Solutions for Thriving in the Digital Real Estate Landscape</p><br>
+            </p>
+
+            <button class="button2">Get Started</button><br><br>
+            <img src=https://qsumare.netlify.app/public/Header%20image.png alt="" width="500px" height="350px">
+        </div>
+        <div class="box4"></div>
+    </div>
+
+    <div class="page1">
+        <h2>Real Estate-Focused Digital Mastery</h2> <br><br>
+        <div class="box6">
+            <div><img src="https://qsumare.netlify.app/public/cuate.png" alt="" width="390px" height="270px"></div>
+            <div class="textnew">
+                <h2>Unlock the Potential of Digital Real Estate
+                    Excellence</h2>
+                <p id="para">At Osumare, we understand that the real estate landscape demands a <br>
+                    digital presence that aligns with the intricacies of property marketing. <br>
+                    Our range of specialized services is meticulously designed to catapult <br>
+                    your brand's success in the ever-evolving digital property market.</p><br>
+                <button class="button5">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page3">
+        <h5>Our Service Offerings</h5><br>
+        <p>Strategies that Drive Property Market Excellence</p>
+        <div class="free">
+            <div class="boxx"><img src=https://qsumare.netlify.app/public/Group%20117.png id="pic">
+                <h3>Automotive SEO</h3>
+                <p>Drive Your Success with Automotive SEO: Ignite Online Visibility and Outrace the Competition.
+                    Accelerate Your Business Growth Today</p>
+            </div>
+            <div class="boxx"><img src=https://qsumare.netlify.app/public/Group%20117%20(1).png id="pic">
+                <h3>PPC Precision</h3>
+                <p>Maximize visibility and drive quality traffic with meticulously targeted Pay-Per-Click campaigns.</p>
+            </div>
+            <div class="boxx"><img src=https://qsumare.netlify.app/public/Group%20117%20(2).png id="pic">
+                <h3>Social Acceleration</h3>
+                <p>Engage and influence your audience across social media platforms, amplifying your brand's presence
+                    and connection.</p>
+            </div>
+            <div class="boxx"><img src=https://qsumare.netlify.app/public/content.png id="pic" width="50px"
+                    height="50px">
+                <h3>Content Excellence</h3>
+                <p>Craft compelling, automotive-specific content that resonates with enthusiasts and drives engagement.
+                </p>
+            </div>
+        </div>
+        <div class="free">
+            <div class="boxx"><img src=https://qsumare.netlify.app/public/Group%20117%20(4).png id="pic">
+                <h3>Web Design</h3>
+                <p>Transform visitors into customers with high-performance websites designed for seamless user
+                    experiences and increased conversions.</p>
+            </div>
+            <div class="boxx"><img src=https://qsumare.netlify.app/public/Data%20driven%20(1).png id="pic" width="50px"
+                    height="50px">
+                <h3>Data-Driven Insights</h3>
+                <p>Leverage data to refine your strategies, making informed decisions that drive revenue growth.</p>
+            </div>
+            <div class="boxx"><img src=https://qsumare.netlify.app/public/Group%20117%20(6).png id="pic">
+                <h3>End-to-End Solutions</h3>
+                <p>Drive Your Success with Automotive SEO: Ignite Online Visibility and Outrace the Competition.
+                    Accelerate Your Business Growth Today</p>
+            </div>
+            <div class="boxx"><img src=https://qsumare.netlify.app/public/Group%20117%20(7).png id="pic">
+                <h3>Video marketing</h3>
+                <p>From initial awareness to post-purchase loyalty, we offer full-funnel solutions that guide customers
+                    through every step of their journey.</p>
+            </div>
+        </div><br><br><br><br>
+        <button class="button5">Get Started</button>
+    </div>
+    <div class="page4">
+        <h5>Navigating Real Estate's Digital Landscape</h5>
+        <p>Insights for Real Estate Marketing Advantage</p>
+        <div class="boxt3">
+            <div class="boxx1">
+                <div id="pic1">
+                    <div id="pic01"> <img src="https://stalwart-treacle-c1746e.netlify.app/pic01.png"></div>
+                    <div id="tex">
+                        <h3>Market Trends Analysis</h3>
+                        <p>Predictive insights to guide real estate strategies.</p>
+                    </div>
+                </div>
+
+                <div id="pic1">
+                    <div id="pic01"> <img src="https://stalwart-treacle-c1746e.netlify.app/pic02.png"></div>
+                    <div id="tex">
+                        <h3>Targeted Buyer Persona </h3>
+                        <p>Understand and connect with your ideal property buyers.</p>
+                    </div>
+                </div>
+
+                <div id="pic1">
+                    <div id="pic01"> <img src="https://stalwart-treacle-c1746e.netlify.app/pic03.png"></div>
+                    <div id="tex">
+                        <h3>Competitor Insights</h3>
+                        <p>Stand out in the property market with informed strategies.</p>
+                    </div>
+                </div>
+                <div id="pic1">
+                    <div id="pic01"> <img src="https://stalwart-treacle-c1746e.netlify.app/pic04.png" width="50px"
+                            height="50px"></div>
+                    <div id="tex">
+                        <h3>Visual Content Appeal</h3>
+                        <p>Captivate buyers with appealing visuals and immersive experiences.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="boxx2"><img src="https://stalwart-treacle-c1746e.netlify.app/image01.png" alt="" height="350px"
+                    width="400px"></div>
+        </div>
+    </div>
+
+    <div class="page5">
+        <h5>Driving Property Inquiries to Conversions</h5> <br>
+        <p>Streamlined Strategies for Real Estate Success</p>
+        <div class="box04">
+            <div class="boxx3"><img src="https://stalwart-treacle-c1746e.netlify.app/pic05.png" alt="" height="310px"
+                    width="390px"></div>
+            <div class="boxx4">
+                <h2>Optimized Path to Property Purchase</h2><br>
+                <p id="para"> In the dynamic realm of real estate, the journey from a property inquiry to a <br>
+                    successful conversion demands a well-crafted approach. At Osumare, we <br>
+                    specialize in guiding potential buyers through this journey seamlessly, <br>
+                    maximizing inquiries-turned-conversions with expert strategies.</p> <br><br><br>
+                <button class="button5">Get Started</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="page6">
+        <h5>Driving Property Inquiries to Conversions</h5>
+        <div class="boxt5">
+            <div class="boxx5"><img src="https://stalwart-treacle-c1746e.netlify.app/pic06.png" id="pics">
+                <h3 id="p">Call-to-Action Optimization</h3><br>
+                <p id="h8">Our carefully crafted CTAs guide potential buyers through the<br> property journey, enhancing
+                    engagement and conversion rates.</p>
+            </div>
+            <div class="boxx5"><img src="https://stalwart-treacle-c1746e.netlify.app/pic07.png" id="pics">
+                <h3 id="p">Landing Page Efficiency</h3><br>
+                <p id="h8">Tailored landing pages are designed for maximum property lead conversion.<br> They provide
+                    seamless user experiences and clear pathways for inquiry submission.</p>
+            </div>
+        </div>
+
+        <div class="boxt5">
+            <div class="boxx5"><img src="https://stalwart-treacle-c1746e.netlify.app/pic08.png" id="pics">
+                <h3 id="p">Social Proof Utilization</h3><br>
+                <p id="h8">Leverage the power of testimonials and success stories from satisfied <br>buyers to build
+                    trust
+                    and credibility, encouraging hesitant prospects to take action</p>
+            </div>
+            <div class="boxx5"><img src="https://stalwart-treacle-c1746e.netlify.app/pic09.png" id="pics">
+                <h3 id="p">Mobile-Friendly Experience</h3><br>
+                <p id="h8">With a responsive design approach, our strategies ensure a seamless <br>browsing experience
+                    across all devices. This responsiveness enhances engagement<br> and conversions by accommodating the
+                    preferences of on-the-go property seekers.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page6">
+        <h5>Our Expertise in Action</h5>
+        <div class="boxt5">
+            <div class="boxx5"><img src="https://stalwart-treacle-c1746e.netlify.app/pic10.png" id="pics">
+                <h3 id="p">Effective CTAs</h3><br>
+                <p id="h8">See how our strategic CTAs drove a significant increase in property<br> inquiries and
+                    accelerated
+                    sales for a real estate agency.</p>
+            </div>
+            <div class="boxx5"><img src="https://stalwart-treacle-c1746e.netlify.app/pic11.png" id="pics">
+                <h3 id="p">Conversion-Optimized Landing Pages</h3><br>
+                <p id="h8">Explore a case study where our landing page optimization increased <br>property lead
+                    conversion
+                    rates by 30%</p>
+            </div>
+        </div>
+        <div class="boxt5">
+            <div class="boxx5"><img src="https://stalwart-treacle-c1746e.netlify.app/pic12.png" id="pics">
+                <h3 id="p">Trust Building with Social Proof</h2><br>
+                    <p id="h8">Discover how leveraging client testimonials boosted buyer confidence,<br> leading to
+                        higher
+                        conversion rates for a property development project</p>
+            </div>
+            <div class="boxx5"><img src="https://stalwart-treacle-c1746e.netlify.app/pic13.png" id="pics">
+                <h3 id="p">Mobile-First Success:</h2><br>
+                    <p id="h8">Learn how our mobile-responsive design approach resulted in a 25% increase<br> in
+                        inquiries
+                        from mobile users for a real estate agency.</p>
+            </div>
+        </div>
+    </div>
+    <div class="page7">
+        <div class="blue"></div>
+        <div class="font"><br>
+            <h3 id="p">Your Peace of Mind</h3>
+            <pre id="pre">Through our conversion-focused strategies, we ensure that property 
+seekers are not just visitors, but engaged prospects ready to make
+their next move in the real estate market</pre>
+            <button class="button5">Get Started</button><br><br><br><br><br><br><br>
+            <h3 id="p">What Our Pharma Partners Say</h3>
+            <p>Driving Transformations, One Brand at a Time</p>
+        </div>
+        <div class="red"></div>
+    </div>
+
+    <div class="page8">
+        <div class="box1">
+            <div class="img"><img src="https://stalwart-treacle-c1746e.netlify.app/image002.png" height="305px"
+                    width="450px"></div>
+            <div class="boxx6">
+                <div class="small">
+                    <div class="low"><img src="https://stalwart-treacle-c1746e.netlify.app/image003.png" height="50px"
+                            width="50px"></div>
+                    <h5>Tabish Khan</h5>
+                    <div class="low"><img src="https://stalwart-treacle-c1746e.netlify.app/image004.png" height="40px"
+                            width="40px"></div>
+                </div>
+                <p id="para">Osumare's expertise in pharma marketing is unparalleled. <br>
+                    Their strategies helped us navigate complex regulations <br>
+                    while driving remarkable growth.</p>
+            </div>
+        </div>
+        <div class="arrow">
+            <div id="emo"><a href="#"><img src="https://stalwart-treacle-c1746e.netlify.app/arrow1.png" alt=""
+                        height="60px" width="60px"></a></div>
+            <div id="emo"><a href="#"><img src="https://stalwart-treacle-c1746e.netlify.app/arrow2.png" alt=""
+                        height="60px" width="60px"></a></div>
+        </div>
+    </div><br><br>
+    <div class="page9">
+        <h5>Frequently Asked Questions</h5>
+        <p id="p">Pinpoint your audience with precision, ensuring your marketing efforts reach those most likely <br>
+            to engage with your brand.</p>
+        <div class="bax6">
+            <div class="boxx7">
+                <h3 id="ask">1. How does Osumare measure campaign success?</h3>
+            </div>
+            <div class="boxx7">
+                <h3 id="ask">2. How does Osumare measure campaign success?</h3>
+            </div>
+            <div class="boxx7">
+                <h3 id="ask">3. How does Osumare measure campaign success?</h3>
+            </div>
+            <div class="boxx8">
+                <p id="as">We believe in measurable results. Our data-driven approach means that every campaign's
+                    performance is tracked, analyzed, and
+                    refined for optimal outcomes. We provide regular reports that detail key metrics, giving you clear
+                    insights into how our strategies are
+                    driving growth for your brand.</p>
+            </div>
+        </div><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h2>Connect with Our Digital Marketing Experts</h2>
+        <p id="h2">Reach Out for Tailored Strategies and Results-Driven Solutions. Let's <br>
+            Elevate Your Online Presence Together</p>
+    </div> <br><br>
+
+
+
+</body>
+
+</html>
